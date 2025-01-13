@@ -4,7 +4,9 @@ import doctors from './doctor.js'
 import medicines from './medicine.js'
 import ambulances from './ambulence.js'
 const app=express()
-app.use(cors())
+app.use(cors({
+    origin:"*"
+}))
 
 app.get('/doctors',(req,res)=>{
     res.status(200).json({
