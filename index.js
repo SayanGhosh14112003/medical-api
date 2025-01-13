@@ -1,9 +1,10 @@
 import express from 'express'
+import cors from 'cors'
 import doctors from './doctor.js'
 import medicines from './medicine.js'
 import ambulances from './ambulence.js'
 const app=express()
-
+app.use(cors())
 
 app.get('/doctors',(req,res)=>{
     res.status(200).json({
